@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+	<meta charset="utf8">
+		<title>ShowHide</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<!--script src="controller.js"></script-->
+		<script src="controller.js"></script>
+	</head>
+
+	<body ng-controller="mycontroller">
+	{{$parent.nombre}}
+	<br>
+	{{nombre}}
+	<br>
+		<div ng-controller="childcontroller">
+			{{nombre}}
+			<br>
+			<input type="text" ng-model="$parent.$parent.nombre">
+			<input type="text" ng-model="$parent.nombre">
+			<input type="text" ng-model="nombre">
+
+		</div>
+	</body>
+</html>
